@@ -1,0 +1,90 @@
+<div class="container">
+    <!-- CALCULATOR-->
+    <div class="calculator">
+        <div class="title-section">
+            <h1>Mortgage Calculator </h1>
+            <button (click)="clearForm()">Clear All</button>
+        </div>
+
+        <form [formGroup]="mortageForm" (ngSubmit)="calculateRepayments()">
+            <div class="mortage-amount">
+                <label for="amount" class="form-label">Mortgage Amount</label>
+                <div class="input-wrapper">
+                    <span class="input-prefix">€</span>
+                    <input type="number" id="amount" formControlName="amount">
+                </div>
+
+                <div class="years-rate">
+                    <label for="years" class="form-label"> Mortgage Term</label>
+                    <label for="rate" class="form-label left-spacer">Interest Rate</label>
+                </div>
+
+
+                <div class="years-rate-inputs">
+                    <div class="input-wrapper">
+                        <input type="number" id="years" formControlName="years">
+                        <span class="input-suffix">years</span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input type="number" id="rate" formControlName="rate">
+                        <span class="input-suffix">%</span>
+                    </div>
+                </div>
+            
+            <label for="mortgageType" class="form-label">Mortgage Type</label>
+            <div class="mortgage-type">
+                <input type="radio" id="repayment" formControlName="mortgageType" value="repayment">
+                <label for="repayment">Repayment</label>
+            </div>
+
+            <div class="mortgage-type">
+                <input type="radio" id="interest-only" formControlName="mortgageType" value="interestOnly">
+                <label for="interestOnly">Interest Only</label>
+            </div>
+
+            <button class="calculate-btn" type="submit" [disabled]="mortageForm.invalid">
+                <div class="calculate-btn-content">
+                    <img src="icon-calculator.svg" alt="">
+                    <p>Calculate Payments</p>
+                </div>
+            </button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+
+
+    <!-- RESULTS-->
+    <div class="results" *ngIf="noResult else validResult"> ">
+        <img class="empty-image" src="illustration-empty.svg" alt="illustration empty">
+        <p class="empty-txt-1">Results shown here</p>
+        <p class="empty-txt-2"> Complete the form and click "calculate payments" to see what your monthly repayments would be.</p>
+    </div>
+
+    <ng-template #validResult>
+        <div class="results">
+            <h2 class="results-title">Your Results</h2>
+            <p class="result-txt"> Your results are shown below based on the information you provided.
+                To adjust the results, edit the form and click "calculate payments" again.
+            </p>
+            <div class="results-wrapper">
+                <p class="result-txt">Your monthly repayments</p>
+                <p class="repayment-monthly"> {{ monthlyRepayment | currency: 'EUR'}}</p>
+                <div class="total">
+                    <p class="result-txt">Total you'll repay over the term</p>
+                    <p class="repayment-total"> {{totalRepayment | currency: 'EUR'}}</p>
+
+                </div>
+            </div>
+            
+        </div>
+    </ng-template>
+</div>
+
+
+

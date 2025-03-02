@@ -1,0 +1,248 @@
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 1008px;
+    height: 606px;
+    margin: 20%;
+    display: flex;
+}
+
+.calculator {
+    flex: 1;
+    background-color: white;
+}
+
+.calculator h1 {
+    font-size: 22px;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+    margin: 20px;
+}
+
+.title-section {
+    display: flex;
+}
+
+.title-section button {
+    margin-left: 80px;
+    margin-top: 30px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid hsl(200, 24%, 40%);
+    color: hsl(200, 24%, 40%);
+    height: 16px;
+    width: 65px;
+    cursor: pointer;
+}
+
+.mortage-amount {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.form-label {
+    margin-bottom: 8px;
+    color: hsl(200, 24%, 40%);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#amount {
+    height: 48px;
+    width: 380px;
+    padding-left: 15%;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-prefix {
+    position: absolute;
+    left: 1px;
+    width: 10%;
+    height: 95%;
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(200, 24%, 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+
+.years-rate {
+    display: flex;
+}
+
+.left-spacer {
+    margin-left: 155px;
+}
+
+#years {
+    height: 48px;
+    width: 180px;
+    padding-left: 15%;
+}
+
+#rate {
+    margin-left: 60px;
+    height: 48px;
+    width: 180px;
+    padding-left: 10%;
+}
+
+.input-suffix {
+    position: absolute;
+    right: 1px;
+    width: 26%;
+    height: 95%;
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(200, 24%, 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    padding-left: 5px;
+}
+
+.years-rate-inputs {
+    display: flex;
+}
+
+.mortgage-type {
+    border: 1px solid hsl(200, 24%, 40%);
+    border-radius: 5px;
+    height: 48px;
+    width: 455px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+.mortgage-type label {
+    padding-left: 10px;
+    color:   hsl(202, 55%, 16%);
+    font-weight: 500;
+}
+
+.calculate-btn {
+    margin-top: 20px;
+    width: 314px;
+    height: 56px;
+    border-radius: 30px;
+    background-color: hsl(61, 70%, 52%);
+    color:   hsl(202, 55%, 16%);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+}
+
+.calculate-btn:hover {
+    background-color: hsl(61, 70%, 60%);
+}
+
+.calculate-btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calculate-btn-content p {
+    margin-left: 5px;;
+}
+
+.calculate-btn:disabled {
+    background-color: #cccccc; /* Light grey background */
+    color: #666666; /* Dark grey text */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    opacity: 0.6; /* Reduce opacity */
+}
+
+.calculate-btn:disabled .calculate-btn-content img {
+    filter: grayscale(100%); /* Make the image grayscale */
+}
+
+
+
+
+
+
+
+
+.results {
+    flex: 1;
+    background-color: hsl(202, 55%, 16%);
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+.empty-image{
+    width: 192px;
+    height: 192px;
+    margin-top: 120px;   
+}
+
+.empty-txt-1 {
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+}
+
+.empty-txt-2 {
+    font-size: 14px;
+    color: hsl(203, 41%, 72%);
+    margin: 10px;
+    font-weight: 500;
+}
+
+.results-title {
+    text-align: left;
+    margin: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.result-txt {
+    margin: 20px 20px 10px 20px;
+    font-size: 14px;
+    color: hsl(203, 41%, 72%);
+    font-weight: 500;
+    
+}
+
+.results-wrapper {
+    margin: 30px;
+    text-align: left;
+    background-color: hsl(202, 52%, 8%);
+    padding: 10px;
+    border-radius: 10px;
+    border-top: 5px solid hsl(61, 70%, 52%);
+}
+
+.repayment-monthly {
+    color: hsl(61, 70%, 52%);
+    margin-left: 20px;
+    font-size: 46px;
+    margin-top: 15px;
+}
+
+.total {
+    border-top: 0.1px solid hsl(203, 41%, 72%);
+}
+
+.repayment-total {
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+}

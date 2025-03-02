@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MortageCalculatorComponent } from "./mortage-calculator/mortage-calculator.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ MortageCalculatorComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
