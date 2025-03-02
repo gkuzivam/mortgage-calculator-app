@@ -22,7 +22,10 @@ export class MortageCalculatorComponent {
   });
 
   clearForm() {
-    window.location.reload();
+    this.mortageForm.reset();
+    this.noResult = true;
+    this.monthlyRepayment = 0;
+    this.totalRepayment = 0;
   }
 
   calculateRepayments() {
